@@ -19,15 +19,12 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
 
-      - name: Find and chmod gradlew
-        run: find . -name "gradlew" -exec chmod +x {} \;
-
       - name: Build APK
         run: |
+          find . -name "gradlew" -exec chmod +x {} \;
           GRADLEW=$(find . -name "gradlew" | head -1)
-          $GRADLEW assembleDebug --no-daemon
-        env:
-          GRADLE_OPTS: "-Dorg.gradle.daemon=false -Xmx2g"
+          echo "Found gradlew at: $GRADLEW"
+          $GRADLEW assembleDebug --no-daemon --stacktrace
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
