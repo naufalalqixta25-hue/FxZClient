@@ -19,16 +19,22 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
 
-      - name: Build APK
+      - name: Prepare project
+        working-directory: FxZClient
         run: |
-          find . -name "gradlew" -exec chmod +x {} \;
-          GRADLEW=$(find . -name "gradlew" | head -1)
-          echo "Found gradlew at: $GRADLEW"
-          $GRADLEW assembleDebug --no-daemon --stacktrace
+          echo "sdk.dir=$ANDROID_SDK_ROOT" > local.properties
+          echo "org.gradle.jvmargs=-Xmx2048m -XX:+HeapDumpOnOutOfMemoryError" > gradle.properties
+          echo "android.useAndroidX=true" >> gradle.properties
+          echo "android.enableJetifier=true" >> gradle.properties
+          chmod +x gradlew
+
+      - name: Build APK
+        working-directory: FxZClient
+        run: ./gradlew assembleDebug --no-daemon --stacktrace
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: FxZClient-APK
-          path: "**/build/outputs/apk/debug/*.apk"
+          path: FxZClient/app/build/outputs/apk/debug/*.apk
           retention-days: 7
