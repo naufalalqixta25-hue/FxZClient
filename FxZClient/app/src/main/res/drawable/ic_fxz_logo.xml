@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="80dp" android:height="80dp"
+    android:viewportWidth="80" android:viewportHeight="80">
+    <!-- Hexagon outer ring -->
+    <path android:fillColor="@color/neon_blue"
+        android:pathData="M40,4 L68,20 L68,60 L40,76 L12,60 L12,20 Z"
+        android:strokeColor="@color/neon_blue" android:strokeWidth="2"
+        android:fillAlpha="0.15"/>
+    <!-- F letter -->
+    <path android:fillColor="@color/neon_blue"
+        android:pathData="M24,26 L38,26 L38,30 L28,30 L28,36 L36,36 L36,40 L28,40 L28,54 L24,54 Z"/>
+    <!-- x letter -->
+    <path android:fillColor="@color/neon_blue"
+        android:pathData="M41,32 L45,32 L49,39 L53,32 L57,32 L51,42 L57,54 L53,54 L49,46 L45,54 L41,54 L47,42 Z"/>
+    <!-- Z letter subscript -->
+    <path android:fillColor="#80B4FF"
+        android:pathData="M48,57 L56,57 L56,59 L51,63 L56,63 L56,65 L48,65 L48,63 L53,59 L48,59 Z"
+        android:strokeWidth="0"/>
+</vector>

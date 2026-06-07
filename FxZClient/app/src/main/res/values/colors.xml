@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ── Primary Dark Background ───────────────────────────────────── -->
+    <color name="bg_primary">#0A0A0F</color>
+    <color name="bg_secondary">#0F1117</color>
+    <color name="bg_card">#12151E</color>
+    <color name="bg_surface">#161B26</color>
+    <color name="bg_elevated">#1C2132</color>
+
+    <!-- ── Neon Blue (Primary Accent) ─────────────────────────────────── -->
+    <color name="neon_blue">#00B4FF</color>
+    <color name="neon_blue_dim">#0066AA</color>
+    <color name="neon_blue_glow">#1A00B4FF</color>
+    <color name="neon_blue_dark">#003D6B</color>
+
+    <!-- ── Other Neon Colors ──────────────────────────────────────────── -->
+    <color name="neon_green">#00FF88</color>
+    <color name="neon_orange">#FF8800</color>
+    <color name="neon_red">#FF3355</color>
+    <color name="neon_purple">#AA55FF</color>
+    <color name="neon_yellow">#FFCC00</color>
+
+    <!-- ── Text ───────────────────────────────────────────────────────── -->
+    <color name="text_primary">#EAEAF0</color>
+    <color name="text_secondary">#8898AA</color>
+    <color name="text_hint">#445566</color>
+    <color name="text_disabled">#334455</color>
+
+    <!-- ── Borders / Dividers ─────────────────────────────────────────── -->
+    <color name="border_default">#1E2D40</color>
+    <color name="border_active">#00B4FF</color>
+    <color name="divider">#111822</color>
+
+    <!-- ── Status ─────────────────────────────────────────────────────── -->
+    <color name="status_online">#00FF88</color>
+    <color name="status_offline">#FF3355</color>
+    <color name="status_pending">#FFCC00</color>
+
+    <!-- ── Gradients (used in drawables) ─────────────────────────────── -->
+    <color name="grad_start">#0A0A0F</color>
+    <color name="grad_mid">#070D18</color>
+    <color name="grad_end">#020407</color>
+
+    <!-- ── Transparent overlays ──────────────────────────────────────── -->
+    <color name="overlay_dark">#CC000000</color>
+    <color name="overlay_medium">#88000000</color>
+    <color name="overlay_light">#44000000</color>
+
+    <!-- ── Material default overrides ────────────────────────────────── -->
+    <color name="colorPrimary">#00B4FF</color>
+    <color name="colorPrimaryVariant">#0066AA</color>
+    <color name="colorOnPrimary">#000000</color>
+    <color name="colorSecondary">#00FF88</color>
+    <color name="colorOnSecondary">#000000</color>
+    <color name="colorSurface">#12151E</color>
+    <color name="colorOnSurface">#EAEAF0</color>
+    <color name="colorBackground">#0A0A0F</color>
+    <color name="colorOnBackground">#EAEAF0</color>
+    <color name="colorError">#FF3355</color>
+    <color name="colorOnError">#FFFFFF</color>
+</resources>

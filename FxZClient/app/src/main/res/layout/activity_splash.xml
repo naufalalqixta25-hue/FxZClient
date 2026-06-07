@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/bg_splash">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+        android:orientation="vertical" android:gravity="center"
+        android:paddingHorizontal="32dp">
+
+        <!-- Logo + Title -->
+        <LinearLayout android:id="@+id/logoContainer"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:orientation="vertical" android:gravity="center">
+
+            <ImageView android:id="@+id/ivLogo"
+                android:layout_width="@dimen/logo_size" android:layout_height="@dimen/logo_size"
+                android:src="@drawable/ic_fxz_logo" android:contentDescription="FxZ Logo"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="FxZ Client" android:textSize="36sp" android:textStyle="bold"
+                android:textColor="@color/text_primary" android:letterSpacing="0.08"
+                android:layout_marginTop="16dp"/>
+
+            <View android:layout_width="60dp" android:layout_height="2dp"
+                android:background="@color/neon_blue" android:layout_marginTop="8dp"/>
+        </LinearLayout>
+
+        <!-- Tagline -->
+        <TextView android:id="@+id/tvTagline"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="@string/app_tagline" android:textSize="13sp"
+            android:textColor="@color/text_secondary" android:letterSpacing="0.12"
+            android:layout_marginTop="12dp" android:visibility="gone"/>
+
+        <!-- Progress -->
+        <ProgressBar android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="200dp" android:layout_height="3dp"
+            android:layout_marginTop="48dp"
+            android:progressTint="@color/neon_blue"
+            android:progressBackgroundTint="@color/border_default"
+            android:max="100" android:progress="0" android:visibility="gone"/>
+    </LinearLayout>
+
+    <!-- Version -->
+    <TextView android:id="@+id/tvVersion"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="24dp"
+        android:textSize="11sp" android:textColor="@color/text_hint"
+        android:visibility="gone"/>
+</FrameLayout>

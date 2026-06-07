@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FxZ Client</string>
+    <string name="app_tagline">Ultimate SA:MP Experience</string>
+    <string name="app_version">v1.0.0</string>
+
+    <!-- Nav -->
+    <string name="nav_home">Home</string>
+    <string name="nav_servers">Servers</string>
+    <string name="nav_download">Download</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_profile">Profile</string>
+
+    <!-- Home -->
+    <string name="btn_play">▶  PLAY</string>
+    <string name="btn_download_game">⬇  DOWNLOAD GAME</string>
+    <string name="btn_server_browser">Server Browser</string>
+    <string name="lbl_recent_servers">Recent Servers</string>
+    <string name="lbl_favorites">Favorites</string>
+    <string name="lbl_device_stats">Device Stats</string>
+    <string name="lbl_news">News &amp; Events</string>
+    <string name="game_ready">Game Ready</string>
+    <string name="game_not_ready">Download Required</string>
+
+    <!-- Server -->
+    <string name="btn_connect">Connect</string>
+    <string name="btn_add_server">Add Server</string>
+    <string name="hint_search">Search servers…</string>
+    <string name="hint_server_ip">Server IP / Host</string>
+    <string name="hint_server_port">Port (default 7777)</string>
+    <string name="lbl_players">Players</string>
+    <string name="lbl_ping">Ping</string>
+    <string name="lbl_mode">Mode</string>
+    <string name="lbl_offline">OFFLINE</string>
+    <string name="sort_players">Players</string>
+    <string name="sort_ping">Ping</string>
+    <string name="sort_name">Name</string>
+    <string name="sort_favorites">Favorites</string>
+    <string name="empty_servers">No servers found.\nTap + to add a server.</string>
+
+    <!-- Download -->
+    <string name="lbl_download_title">Game Setup</string>
+    <string name="btn_start_download">Download Game Files</string>
+    <string name="btn_validate">Validate Files</string>
+    <string name="btn_clear_completed">Clear Completed</string>
+    <string name="status_checking">Checking game files…</string>
+    <string name="status_downloading">Downloading…</string>
+    <string name="status_extracting">Extracting…</string>
+    <string name="status_ready">Game is ready!</string>
+    <string name="lbl_storage">Storage</string>
+
+    <!-- Settings -->
+    <string name="lbl_fps_lock">FPS Lock</string>
+    <string name="lbl_sensitivity">Touch Sensitivity</string>
+    <string name="lbl_anti_lag">Anti-Lag Optimization</string>
+    <string name="lbl_gpu_opt">GPU Optimization</string>
+    <string name="lbl_performance_mode">Performance Mode</string>
+    <string name="lbl_battery_saver">Battery Saver Mode</string>
+    <string name="lbl_show_overlay">In-Game Overlay (FPS/RAM)</string>
+    <string name="lbl_voice_chat">Voice Chat</string>
+    <string name="lbl_audio_enhancer">Audio Enhancer</string>
+    <string name="lbl_theme">Theme</string>
+    <string name="btn_backup_config">Backup Config</string>
+    <string name="btn_restore_config">Restore Config</string>
+    <string name="btn_clean_cache">Clean Cache</string>
+    <string name="lbl_device_info">Device Info</string>
+    <string name="lbl_graphics">Graphics</string>
+    <string name="lbl_audio">Audio</string>
+    <string name="lbl_gameplay">Gameplay</string>
+    <string name="lbl_data">Data &amp; Backup</string>
+    <string name="lbl_about">About</string>
+    <string name="lbl_discord">Join Discord</string>
+    <string name="lbl_telegram">Telegram Community</string>
+
+    <!-- Profile -->
+    <string name="lbl_quick_login">Quick Login</string>
+    <string name="hint_player_name">Player Name</string>
+    <string name="hint_password">Password (optional)</string>
+    <string name="btn_save">Save</string>
+    <string name="btn_create_profile">+ New Profile</string>
+    <string name="lbl_my_profiles">My Profiles</string>
+    <string name="lbl_active">ACTIVE</string>
+    <string name="lbl_play_time">Play Time</string>
+    <string name="lbl_sessions">Sessions</string>
+    <string name="no_profiles">No profiles yet.\nCreate one to get started.</string>
+
+    <!-- Game Launch -->
+    <string name="lbl_connecting">Connecting…</string>
+    <string name="btn_launch">Launch Game</string>
+    <string name="btn_cancel">Cancel</string>
+
+    <!-- Dialogs -->
+    <string name="dlg_create_profile">Create Profile</string>
+    <string name="dlg_delete_profile">Delete Profile?</string>
+    <string name="dlg_update_title">Update Available</string>
+    <string name="dlg_update_message">A new version of FxZ Client is available. Update now?</string>
+    <string name="btn_update_now">Update Now</string>
+    <string name="btn_later">Later</string>
+
+    <!-- Errors -->
+    <string name="err_storage_permission">Storage permission required</string>
+    <string name="err_no_internet">No internet connection</string>
+    <string name="err_launch_failed">Failed to launch game</string>
+    <string name="err_name_empty">Player name cannot be empty</string>
+    <string name="err_name_short">Name must be at least 3 characters</string>
+</resources>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="FxZ.ProgressBar" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:progressTint">@color/neon_blue</item>
+        <item name="android:progressBackgroundTint">@color/border_default</item>
+        <item name="android:minHeight">@dimen/progress_height</item>
+        <item name="android:maxHeight">@dimen/progress_height</item>
+    </style>
+
+    <style name="FxZ.Chip" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="chipBackgroundColor">@color/bg_surface</item>
+        <item name="checkedIconVisible">false</item>
+        <item name="chipStrokeColor">@color/border_default</item>
+        <item name="chipStrokeWidth">1dp</item>
+    </style>
+
+    <style name="FxZ.Switch" parent="Widget.MaterialComponents.CompoundButton.Switch">
+        <item name="thumbTint">@color/switch_thumb_tint</item>
+        <item name="trackTint">@color/switch_track_tint</item>
+    </style>
+</resources>

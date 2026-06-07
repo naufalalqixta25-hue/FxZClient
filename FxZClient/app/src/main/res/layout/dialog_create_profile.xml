@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="vertical" android:padding="8dp">
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/FxZ.TextInputLayout"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:hint="Player Name (min 3 chars)">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etProfileName"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:inputType="text" android:textColor="@color/text_primary"
+            android:maxLength="24" android:imeOptions="actionNext"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/FxZ.TextInputLayout"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:hint="Default Password (optional)"
+        android:layout_marginTop="12dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etProfilePassword"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:inputType="textPassword" android:textColor="@color/text_primary"
+            android:imeOptions="actionDone"/>
+    </com.google.android.material.textfield.TextInputLayout>
+</LinearLayout>

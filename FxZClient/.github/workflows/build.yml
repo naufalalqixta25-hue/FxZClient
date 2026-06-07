@@ -1,0 +1,65 @@
+name: Build FxZ Client APK
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:          # tombol manual trigger dari GitHub UI
+
+jobs:
+  build:
+    name: Build Debug APK
+    runs-on: ubuntu-latest
+
+    steps:
+      # ── 1. Checkout kode ────────────────────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # ── 2. Setup Java 17 ────────────────────────────────────────────────
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: gradle
+
+      # ── 3. Setup Android SDK ────────────────────────────────────────────
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+
+      # ── 4. Cache Gradle ─────────────────────────────────────────────────
+      - name: Cache Gradle packages
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
+
+      # ── 5. Grant execute permission ─────────────────────────────────────
+      - name: Grant gradlew permission
+        run: chmod +x gradlew
+
+      # ── 6. Build Debug APK ──────────────────────────────────────────────
+      - name: Build Debug APK
+        run: ./gradlew assembleDebug --no-daemon --stacktrace
+        env:
+          GRADLE_OPTS: "-Dorg.gradle.daemon=false -Xmx2g"
+
+      # ── 7. Upload APK as artifact ────────────────────────────────────────
+      - name: Upload Debug APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: FxZClient-debug-APK
+          path: app/build/outputs/apk/debug/*.apk
+          retention-days: 30
+
+      # ── 8. Show APK info ─────────────────────────────────────────────────
+      - name: APK Info
+        run: |
+          echo "=== APK Built Successfully ==="
+          find app/build/outputs/apk -name "*.apk" -exec ls -lh {} \;

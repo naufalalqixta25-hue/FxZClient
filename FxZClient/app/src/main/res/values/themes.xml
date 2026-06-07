@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.FxZClient" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/neon_blue</item>
+        <item name="colorPrimaryVariant">@color/neon_blue_dim</item>
+        <item name="colorOnPrimary">@color/bg_primary</item>
+        <item name="colorSecondary">@color/neon_green</item>
+        <item name="colorOnSecondary">@color/bg_primary</item>
+        <item name="colorSurface">@color/bg_card</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="android:colorBackground">@color/bg_primary</item>
+        <item name="colorOnBackground">@color/text_primary</item>
+        <item name="colorError">@color/neon_red</item>
+        <item name="android:windowBackground">@color/bg_primary</item>
+        <item name="android:statusBarColor">@color/bg_primary</item>
+        <item name="android:navigationBarColor">@color/bg_secondary</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="materialAlertDialogTheme">@style/FxZAlertDialog</item>
+        <item name="bottomSheetDialogTheme">@style/FxZBottomSheet</item>
+        <item name="textAppearanceHeadline4">@style/TextAppearance.FxZ.Headline</item>
+        <item name="textAppearanceBody1">@style/TextAppearance.FxZ.Body</item>
+    </style>
+
+    <style name="Theme.FxZClient.Splash" parent="Theme.FxZClient">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@color/bg_primary</item>
+    </style>
+
+    <style name="Theme.FxZClient.Game" parent="Theme.FxZClient">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowKeepScreenOn">true</item>
+    </style>
+
+    <style name="FxZAlertDialog" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="android:background">@color/bg_elevated</item>
+        <item name="colorSurface">@color/bg_elevated</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorPrimary">@color/neon_blue</item>
+        <item name="buttonBarPositiveButtonStyle">@style/FxZ.Button.Text.Primary</item>
+        <item name="buttonBarNegativeButtonStyle">@style/FxZ.Button.Text.Secondary</item>
+    </style>
+
+    <style name="FxZBottomSheet" parent="Theme.MaterialComponents.BottomSheetDialog">
+        <item name="android:background">@color/bg_elevated</item>
+        <item name="colorSurface">@color/bg_elevated</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorPrimary">@color/neon_blue</item>
+        <item name="bottomSheetStyle">@style/FxZBottomSheetStyle</item>
+    </style>
+
+    <style name="FxZBottomSheetStyle" parent="Widget.MaterialComponents.BottomSheet.Modal">
+        <item name="android:background">@color/bg_elevated</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.FxZ.BottomSheet</item>
+    </style>
+
+    <style name="ShapeAppearance.FxZ.BottomSheet" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">16dp</item>
+        <item name="cornerSizeTopRight">16dp</item>
+    </style>
+
+    <style name="TextAppearance.FxZ.Headline" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+
+    <style name="TextAppearance.FxZ.Body" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
+    <style name="TextAppearance.FxZ.Neon" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textColor">@color/neon_blue</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="FxZ.Button.Primary" parent="Widget.MaterialComponents.Button">
+        <item name="android:background">@drawable/bg_button_primary</item>
+        <item name="android:textColor">@color/bg_primary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="rippleColor">@color/neon_blue_dim</item>
+    </style>
+
+    <style name="FxZ.Button.Text.Primary" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/neon_blue</item>
+    </style>
+
+    <style name="FxZ.Button.Text.Secondary" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
+    <style name="FxZ.Card" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">@color/bg_card</item>
+        <item name="strokeColor">@color/border_default</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="cardCornerRadius">12dp</item>
+        <item name="cardElevation">0dp</item>
+    </style>
+
+    <style name="FxZ.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundColor">@color/bg_surface</item>
+        <item name="boxStrokeColor">@color/border_default</item>
+        <item name="hintTextColor">@color/text_hint</item>
+        <item name="android:textColorHint">@color/text_hint</item>
+        <item name="boxCornerRadiusTopStart">8dp</item>
+        <item name="boxCornerRadiusTopEnd">8dp</item>
+        <item name="boxCornerRadiusBottomStart">8dp</item>
+        <item name="boxCornerRadiusBottomEnd">8dp</item>
+    </style>
+
+    <style name="FxZ.BottomNav" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="android:background">@color/bg_secondary</item>
+        <item name="itemIconTint">@drawable/nav_item_color</item>
+        <item name="itemTextColor">@drawable/nav_item_color</item>
+        <item name="itemActiveIndicatorStyle">@style/FxZ.BottomNavIndicator</item>
+    </style>
+
+    <style name="FxZ.BottomNavIndicator" parent="Widget.MaterialComponents.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/neon_blue_glow</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.FxZ.BottomNavIndicator</item>
+    </style>
+
+    <style name="ShapeAppearance.FxZ.BottomNavIndicator" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+</resources>

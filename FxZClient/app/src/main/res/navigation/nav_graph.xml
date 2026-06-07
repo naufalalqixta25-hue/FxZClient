@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment android:id="@+id/homeFragment"
+        android:name="com.fxz.client.ui.home.HomeFragment"
+        android:label="Home">
+        <action android:id="@+id/action_home_to_server"
+            app:destination="@id/serverBrowserFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"/>
+        <action android:id="@+id/action_home_to_download"
+            app:destination="@id/downloadFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+        <action android:id="@+id/action_home_to_settings"
+            app:destination="@id/settingsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+        <argument android:name="server"
+            app:argType="com.fxz.client.data.model.Server"
+            app:nullable="true"
+            android:defaultValue="@null"/>
+    </fragment>
+
+    <fragment android:id="@+id/serverBrowserFragment"
+        android:name="com.fxz.client.ui.server.ServerBrowserFragment"
+        android:label="Servers">
+        <argument android:name="server"
+            app:argType="com.fxz.client.data.model.Server"
+            app:nullable="true"
+            android:defaultValue="@null"/>
+    </fragment>
+
+    <fragment android:id="@+id/downloadFragment"
+        android:name="com.fxz.client.ui.download.DownloadFragment"
+        android:label="Download"/>
+
+    <fragment android:id="@+id/settingsFragment"
+        android:name="com.fxz.client.ui.settings.SettingsFragment"
+        android:label="Settings"/>
+
+    <fragment android:id="@+id/profileFragment"
+        android:name="com.fxz.client.ui.profile.ProfileFragment"
+        android:label="Profile"/>
+
+    <fragment android:id="@+id/gameSetupFragment"
+        android:name="com.fxz.client.ui.download.DownloadFragment"
+        android:label="Setup"/>
+</navigation>

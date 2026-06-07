@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content" android:layout_height="wrap_content"
+    android:orientation="vertical" android:padding="8dp"
+    android:background="@drawable/bg_overlay_panel">
+
+    <TextView android:id="@+id/tvFps"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="FPS: --" android:textSize="11sp"
+        android:textColor="@color/neon_green" android:fontFamily="monospace"
+        android:textStyle="bold"/>
+
+    <TextView android:id="@+id/tvRam"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="RAM: --%"
+        android:textSize="11sp" android:textColor="@color/neon_blue"
+        android:fontFamily="monospace"/>
+</LinearLayout>

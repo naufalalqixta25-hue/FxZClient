@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp"
+    android:viewportWidth="108" android:viewportHeight="108">
+    <!-- Hex ring glow -->
+    <path android:fillColor="#1A00B4FF"
+        android:pathData="M54,10 L88,30 L88,78 L54,98 L20,78 L20,30 Z"/>
+    <!-- Hex ring border -->
+    <path android:fillColor="#00B4FF" android:fillAlpha="0.9"
+        android:strokeColor="#00B4FF" android:strokeWidth="2"
+        android:pathData="M54,12 L86,30 L86,76 L54,96 L22,76 L22,30 Z"
+        android:fillType="evenOdd"/>
+    <!-- F -->
+    <path android:fillColor="#00B4FF"
+        android:pathData="M32,36 L52,36 L52,42 L38,42 L38,50 L50,50 L50,56 L38,56 L38,72 L32,72 Z"/>
+    <!-- x -->
+    <path android:fillColor="#00B4FF"
+        android:pathData="M55,44 L61,44 L67,54 L73,44 L79,44 L70,58 L79,72 L73,72 L67,62 L61,72 L55,72 L64,58 Z"/>
+    <!-- Z subscript -->
+    <path android:fillColor="#80B4FF"
+        android:pathData="M64,76 L76,76 L76,79 L69,85 L76,85 L76,88 L64,88 L64,85 L71,79 L64,79 Z"/>
+</vector>

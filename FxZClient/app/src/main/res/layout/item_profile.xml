@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:layout_marginHorizontal="12dp" android:layout_marginVertical="4dp"
+    app:cardBackgroundColor="@color/bg_card" app:strokeWidth="1dp"
+    app:cardCornerRadius="10dp" app:cardElevation="0dp"
+    android:clickable="true" android:focusable="true">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:padding="14dp"
+        android:gravity="center_vertical">
+
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:orientation="vertical">
+
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical">
+
+                <TextView android:id="@+id/tvName"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:textSize="15sp" android:textColor="@color/text_primary"
+                    android:textStyle="bold"/>
+
+                <TextView android:id="@+id/tvActive"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="● ACTIVE" android:textSize="9sp"
+                    android:textColor="@color/neon_green" android:textStyle="bold"
+                    android:layout_marginStart="8dp" android:visibility="gone"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginTop="4dp">
+
+                <TextView android:id="@+id/tvPlayTime"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:textSize="11sp" android:textColor="@color/text_secondary"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="  ·  " android:textSize="11sp" android:textColor="@color/text_hint"/>
+
+                <TextView android:id="@+id/tvSessions"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:textSize="11sp" android:textColor="@color/text_secondary"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnSelect"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content" android:layout_height="36dp"
+            android:text="Use" android:textColor="@color/neon_blue" android:textSize="12sp"/>
+
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnDelete"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content" android:layout_height="36dp"
+            android:text="✕" android:textColor="@color/neon_red" android:textSize="14sp"/>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

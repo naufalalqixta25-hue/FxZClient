@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/bg_splash">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+        android:orientation="vertical" android:gravity="center"
+        android:padding="32dp">
+
+        <ImageView android:layout_width="64dp" android:layout_height="64dp"
+            android:src="@drawable/ic_fxz_logo" android:contentDescription="FxZ"/>
+
+        <TextView android:id="@+id/tvServerName"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textSize="20sp" android:textColor="@color/text_primary" android:textStyle="bold"
+            android:gravity="center" android:layout_marginTop="24dp" android:maxLines="2"
+            android:ellipsize="end"/>
+
+        <TextView android:id="@+id/tvAddress"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textSize="13sp" android:textColor="@color/neon_blue"
+            android:fontFamily="monospace" android:layout_marginTop="4dp"/>
+
+        <TextView android:id="@+id/tvPlayerName"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textSize="12sp" android:textColor="@color/text_secondary"
+            android:layout_marginTop="4dp"/>
+
+        <ProgressBar android:id="@+id/progressLaunch"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="48dp" android:layout_height="48dp"
+            android:indeterminateTint="@color/neon_blue"
+            android:layout_marginTop="32dp" android:visibility="gone"/>
+
+        <TextView android:id="@+id/tvStatus"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Preparing…" android:textSize="13sp"
+            android:textColor="@color/text_secondary" android:layout_marginTop="16dp"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center"
+            android:layout_marginTop="32dp">
+
+            <Button android:id="@+id/btnCancel"
+                android:layout_width="0dp" android:layout_height="48dp"
+                android:layout_weight="1" android:text="Cancel"
+                android:background="@drawable/bg_button_outline"
+                android:textColor="@color/text_secondary" android:layout_marginEnd="8dp"/>
+
+            <Button android:id="@+id/btnLaunch"
+                android:layout_width="0dp" android:layout_height="48dp"
+                android:layout_weight="1" android:text="▶ Launch"
+                android:background="@drawable/bg_button_primary"
+                android:textColor="@color/bg_primary" android:textStyle="bold"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
