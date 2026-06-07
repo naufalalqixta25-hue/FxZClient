@@ -23,10 +23,8 @@ jobs:
         working-directory: FxZClient
         run: |
           echo "sdk.dir=$ANDROID_SDK_ROOT" > local.properties
-          echo "org.gradle.jvmargs=-Xmx2048m -XX:+HeapDumpOnOutOfMemoryError" > gradle.properties
-          echo "android.useAndroidX=true" >> gradle.properties
-          echo "android.enableJetifier=true" >> gradle.properties
           chmod +x gradlew
+          sed -i 's/DEFAULT_JVM_OPTS=.*/DEFAULT_JVM_OPTS="-Xmx2048m -Xms512m"/' gradlew
 
       - name: Build APK
         working-directory: FxZClient
