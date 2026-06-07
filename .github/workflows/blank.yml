@@ -19,5 +19,19 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
 
-      - name: Make gradlew executable
-        run: chmod +x
+      - name: Find and chmod gradlew
+        run: find . -name "gradlew" -exec chmod +x {} \;
+
+      - name: Build APK
+        run: |
+          GRADLEW=$(find . -name "gradlew" | head -1)
+          $GRADLEW assembleDebug --no-daemon
+        env:
+          GRADLE_OPTS: "-Dorg.gradle.daemon=false -Xmx2g"
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: FxZClient-APK
+          path: "**/build/outputs/apk/debug/*.apk"
+          retention-days: 7
